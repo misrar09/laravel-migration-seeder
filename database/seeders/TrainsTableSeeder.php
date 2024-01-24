@@ -23,8 +23,8 @@ class TrainsTableSeeder extends Seeder
                 'arrival_time' => $faker->time(),
                 'train_code' => $faker->unique()->randomNumber(4),
                 'number_of_coaches' => $faker->numberBetween(5, 15),
-                'cancelled' => $faker->boolean,
-                'on_time' => $faker->boolean,
+                'cancelled' => $faker->boolean(),
+                'on_time' => $faker->boolean(),
             ]);
 
             $train->save();
