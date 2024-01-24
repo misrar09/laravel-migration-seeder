@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Dati da config/data.js: {{ $home }}</h1>
-<p>This is my paragraph content.</p>
-<button class="btn btn-primary">Cliccami</button>
+    <h1>Train Schedule</h1>
+
+    <ul>
+        @foreach ($trains as $train)
+            <li>{{ $train->company }} - Departure: {{ $train->departure_time }} - Arrival: {{ $train->arrival_time }}</li>
+        @endforeach
+    </ul>
 @endsection
